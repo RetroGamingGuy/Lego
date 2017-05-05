@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>BrickBook</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+	<div class="container">
+		<div id="banner">
+				
+			<h1>BrickBook</h1>
+				
+			<nav>
+				<ul id="nav">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="models.html">Models</a></li>
+					<li><a href="manuals.html">Manuals</a></li>
+					<li><a href="contact.html">Upload</a></li>
+				</ul>
+			</nav>
+				
+		</div>
+
+		<div class="slideshow" style="max-width:600px">
+		  <img class="mySlides" src="images/lego-cove.jpg" style="width:100%">
+		  <img class="mySlides" src="images/lego-games.jpg" style="width:100%">
+		  <img class="mySlides" src="images/lego-heros.jpg" style="width:100%">
+		  <img class="mySlides" src="images/lego-neverland.jpg" style="width:100%">
+		  <img class="mySlides" src="images/lego-people.jpg" style="width:100%">
+		  <img class="mySlides" src="images/lego-pokemon.jpg" style="width:100%">
+		</div>
+
+
+		<p id="text1"> Welcome to Brickbook, this site is for LEGO builders and lovers to share their creations to the world. We display LEGO models created by both master builders and people who want to express their creativity. We also show off homemade LEGO instruction manuals so you can learn how to build LEGO models. If you would like to post any of your creations, just click on the upload button on the navbar.</p>
+		
+		<div class="model">
+			<img id="pic1" src="images/lego-minecraft.jpg">
+		</div>
+		
+		<div class="bb">
+			<img id="pic2" src="images/lego-bb8.jpg">
+		</div>
+					
+		</div>			
+	
+		<script>
+		var myIndex = 0;
+		carousel();
+
+		function carousel() {
+			var i;
+			var x = document.getElementsByClassName("mySlides");
+			for (i = 0; i < x.length; i++) {
+			   x[i].style.display = "none";  
+			}
+			myIndex++;
+			if (myIndex > x.length) {myIndex = 1}    
+			x[myIndex-1].style.display = "block";  
+			setTimeout(carousel, 10000); // Change image every 10 seconds
+		}
+		</script>
+	</body>
+</html>
